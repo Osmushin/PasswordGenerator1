@@ -36,10 +36,10 @@ def yesorno(answer, simbols):
 
 
 # Функция генерации паролей
-def generate_password(length, chars):
+def generate_password(length, ololo):
     password = []
     for i in range(1, length + 1):
-        password.append(chars[randint(0, len(chars))])
+        password.append(choice(ololo))
     return password
 
 
