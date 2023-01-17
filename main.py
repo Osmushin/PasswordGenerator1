@@ -93,7 +93,8 @@ while not word_yesorno(sim_simbols):
     sim_simbols = input()
 if sim_simbols in "нетНетНЕТ":
     for i in range(len(noneonesimbols)):
-        chars.remove(noneonesimbols[i])
+        if noneonesimbols[i] in chars:
+            chars.remove(noneonesimbols[i])
 
 for i in range(1, int(amount)+1):
     print('Пароль №', i, ':', end='')
