@@ -36,10 +36,10 @@ def yesorno(answer, simbols):
 
 
 # Функция генерации паролей
-def generate_password(length, chars):
+def generate_password(length, ololo):
     password = []
     for i in range(1, length + 1):
-        password.append(chars[randint(0, len(chars))])
+        password.append(choice(ololo))
     return password
 
 
@@ -93,7 +93,8 @@ while not word_yesorno(sim_simbols):
     sim_simbols = input()
 if sim_simbols in "нетНетНЕТ":
     for i in range(len(noneonesimbols)):
-        chars.remove(noneonesimbols[i])
+        if noneonesimbols[i] in chars:
+            chars.remove(noneonesimbols[i])
 
 for i in range(1, int(amount)+1):
     print('Пароль №', i, ':', end='')
