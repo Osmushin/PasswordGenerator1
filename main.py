@@ -59,6 +59,7 @@ yesorno(answerdigit, digits)
 print(chars)
 
 
+
 print('Включать ли в состав пароля маленькие буквы? (ответьте "да" или "нет")')
 lowerletters = input()
 while not word_yesorno(lowerletters):
